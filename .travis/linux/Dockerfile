@@ -1,6 +1,5 @@
 FROM scgmlz/bornagain-dev:xenial
-RUN apt install libqt5svg5-dev
-RUN apt install wget
+RUN apt install libqt5svg5-dev wget
 
 ADD . /source
 WORKDIR /source
