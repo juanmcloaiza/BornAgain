@@ -1,0 +1,9 @@
+#Debian jessie
+FROM debian:jessie
+RUN apt-get update
+RUN apt-get install libqt5svg5-dev -y
+
+ADD . /source
+WORKDIR /source
+
+
