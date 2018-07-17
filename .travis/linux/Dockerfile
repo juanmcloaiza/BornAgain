@@ -1,10 +1,18 @@
-#Debian jessie
-FROM debian:jessie
+#Ubuntu xenial (16.04)
+FROM ubuntu:16.04
+
+#Ubuntu bionic (18.04)
+#FROM ubuntu:18.04
+
+#Debian stretch
+#FROM debian:stretch
+
+#  --------------------------------  #
+
+ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update
 RUN apt-get install -y build-essential cmake libgsl-dev libboost-all-dev libfftw3-dev python3 python3-dev python3-numpy python3-matplotlib libtiff5-dev qt5-default libqt5designercomponents5 qttools5-dev libqt5svg5-dev
 
 ADD . /source
 WORKDIR /source
-
-
