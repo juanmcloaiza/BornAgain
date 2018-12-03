@@ -51,7 +51,7 @@ class BA_CORE_API_ CsvImportAssistant : public QObject
     Q_OBJECT
 public:
     CsvImportAssistant(const QString& file, const bool useGUI = false, QWidget* parent = nullptr);
-    ImportDataInfo getData() { return m_dataAvailable ? fillData() : ImportDataInfo(); }
+    ImportDataInfo getData();
     static void showErrorMessage(std::string message);
     void setIntensityColumn(int iCol, double multiplier = 1.0);
     void setCoordinateColumn(int iCol, AxesUnits units, double multiplier = 1.0);

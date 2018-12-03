@@ -34,6 +34,12 @@ CsvImportAssistant::CsvImportAssistant(const QString& file, const bool useGUI, Q
       m_firstRow(-1), m_lastRow(-1), m_units(AxesUnits::NBINS), m_dataAvailable(false)
 {
     if (!loadCsvFile()) {
+        m_intensityColNum = -1;
+        m_coordinateColNum = -1;
+        m_units = AxesUnits::NBINS;
+        m_firstRow = -1;
+        m_lastRow = -1;
+        m_dataAvailable = false;
         return;
     }
 
@@ -109,8 +115,8 @@ bool CsvImportAssistant::loadCsvFile()
             m_separator = guessSeparator();
         m_csvFile = std::make_unique<CSVFile>(m_fileName.toStdString(), m_separator);
     } catch (...) {
-        showErrorMessage("There was a problem opening the file \"" + m_fileName.toStdString()
-                         + "\"");
+        // showErrorMessage("There was a problem opening the file \"" + m_fileName.toStdString()
+        //                 + "\"");
         return false;
     }
 
@@ -154,6 +160,19 @@ void CsvImportAssistant::resetAssistant()
     loadCsvFile();
 }
 
+ImportDataInfo CsvImportAssistant::getData()
+{
+    if (m_dataAvailable) {
+        try {
+            return fillData();
+        } catch (...) {
+            return ImportDataInfo();
+        }
+    } else {
+        return ImportDataInfo();
+    }
+}
+
 ImportDataInfo CsvImportAssistant::fillData()
 {
     // In case a 2d import is needed in the future
@@ -164,7 +183,7 @@ ImportDataInfo CsvImportAssistant::fillData()
     std::vector<double> intensityValues;
     std::vector<double> coordinateValues;
 
-    getValuesFromColumns(intensityValues,coordinateValues);
+    getValuesFromColumns(intensityValues, coordinateValues);
 
     auto axisName = csv::UnitsLabels[m_units].toStdString();
     PointwiseAxis coordAxis(axisName, coordinateValues);
