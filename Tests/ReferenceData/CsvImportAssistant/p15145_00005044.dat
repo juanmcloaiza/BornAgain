@@ -1,0 +1,335 @@
+### NICOS data file, created at 2018-09-13 16:02:10
+#                    number : 5044
+#                  filename : p15145_00005044.dat
+#                  filepath : /data/2018/p15145/data/p15145_00005044.dat
+#                      info : timescan(142, 360)
+### Experiment information
+#          Exp_localcontact : e.vezhlev@fz-juelich.de
+#                 Exp_title : 22 Lab course 2018
+#                 Exp_users : e.vezhlev@fz-juelich.de
+#              Exp_proposal : p15145
+#                Exp_remark : 
+### Sample and alignment
+#         Sample_samplename : Ni_4day
+### Instrument setup
+#            Treff_facility : Heinz Maier-Leibnitz Zentrum Garching (MLZ)
+#           Treff_operators : ('J\xc3\xbclich Centre for Neutron Science (JCNS)', 'Technische Universit\xc3\xa4t M\xc3\xbcnchen (TUM)')
+#             Treff_website : http://www.mlz-garching.de
+#         Treff_responsible : Egor Vehzlev <e.vehzlev@fz-juelich.de>
+#                 Treff_doi : 
+#          Treff_instrument : TREFF
+### Offsets
+#              omega_offset : -1.159 deg
+#                phi_offset : 0.00 deg
+#           sample_x_offset : 0.00 mm
+#             detarm_offset : 6.468 deg
+#           sample_z_offset : 0.00 mm
+#                chi_offset : -0.00 deg
+#           sample_y_offset : 0.00 mm
+### Limits
+#          omega_userlimits : (-134.185, 181.735) deg
+#       beamstop_userlimits : (-0.100, 44.859) mm
+#       pow2flip_userlimits : (0.000, 1.500) A
+#       s1_right_userlimits : (-28.70, 15.30) mm
+#        s2_left_userlimits : (-18.35, 18.75) mm
+#      s2_bottom_userlimits : (-25.75, 37.25) mm
+#         detarm_userlimits : (-12.529, 111.469) deg
+#  analyzer_tilt_userlimits : (-0.810, 3.400) deg
+#       sample_x_userlimits : (-28.45, 30.58) mm
+#      s1_bottom_userlimits : (-41.25, 58.75) mm
+#            chi_userlimits : (-12.42, 8.58) deg
+#         s2_top_userlimits : (-35.95, 26.45) mm
+#        mc2_rot_userlimits : (39.200, 272.200) deg
+#       sample_z_userlimits : (-63.00, 36.00) mm
+# polarizer_tilt_userlimits : (-5.200, 2.800) deg
+#       s2_right_userlimits : (-16.69, 20.75) mm
+#            phi_userlimits : (-15.17, 10.32) deg
+#       sample_y_userlimits : (-19.20, 27.80) mm
+#       pow2comp_userlimits : (0.000, 1.500) A
+#         s1_top_userlimits : (-57.70, 42.30) mm
+#        s1_left_userlimits : (-17.20, 24.80) mm
+#    polarizer_y_userlimits : (-36.00, 57.00) mm
+### Precisions/tolerances
+#        sample_y_precision : 0.01 mm
+#          s1_top_precision : 0.01 mm
+#         mc2_rot_precision : 0.010 deg
+#             phi_precision : 0.01 deg
+#        s1_right_precision : 0.01 mm
+#        beamstop_precision : 0.010 mm
+#        pow2flip_precision : 0.000 A
+#       s2_bottom_precision : 0.01 mm
+#         s2_left_precision : 0.01 mm
+#   analyzer_tilt_precision : 0.010 deg
+#          detarm_precision : 0.005 deg
+#        pow2comp_precision : 0.000 A
+#        s2_right_precision : 0.01 mm
+#        sample_z_precision : 0.01 mm
+#          s2_top_precision : 0.01 mm
+#  polarizer_tilt_precision : 0.010 deg
+#             chi_precision : 0.01 deg
+#       s1_bottom_precision : 0.01 mm
+#        sample_x_precision : 0.01 mm
+#     polarizer_y_precision : 0.01 mm
+#           omega_precision : 0.005 deg
+#         s1_left_precision : 0.01 mm
+### Device status
+#               full_status : ok: idle
+#                chi_status : ok: ON [Ref PosOk]
+#                 s1_status : ok: left=ON [PosOk Sync], right=ON [Ref PosOk Sync], bottom=ON [PosOk Sync], top=ON [PosOk Sync]
+#        T_be_heater_status : ok: The device is in ON state.
+#            s1_left_status : ok: ON [PosOk Sync]
+#          be_filter_status : ok: The device is in ON state.
+#             s1_top_status : ok: ON [PosOk Sync]
+#           pow2comp_status : ok: on
+#           sample_y_status : ok: ON [PosOk]
+#                phi_status : ok: ON [PosOk]
+#        polarizer_y_status : ok: ON [PosOk]
+#           s2_right_status : ok: ON [PosOk Sync]
+#                det_status : ok: roi1=idle, roi2=idle, roi_pol=idle, full=idle
+#     polarizer_tilt_status : ok: ON [PosOk]
+#           beamstop_status : ok: ON [Ref PosOk Sync]
+#                NL5_status : ok
+#              timer_status : ok
+#               mon0_status : ok
+#            mc2_rot_status : ok: ON [PosOk]
+#          s1_bottom_status : ok: ON [PosOk Sync]
+#               roi1_status : ok: idle
+#           sample_x_status : ok: ON [Ref PosOk]
+#            Sixfold_status : ok
+#           pflipper_status : ok: The device is in ON state.
+#        T_be_filter_status : ok: The device is in ON state.
+#      analyzer_tilt_status : ok: ON [Ref PosOk]
+#              Crane_status : ok
+#               roi2_status : ok: idle
+#               mon1_status : ok
+#          be_heater_status : ok: The device is in ON state.
+#                t2t_status : ok: slave=ON [PosOk], master=ON [PosOk Sync]
+#         wavelength_status : ok
+#         expshutter_status : ok: The device is in ON state.
+#                 s2_status : ok: left=ON [PosOk Sync], right=ON [PosOk Sync], bottom=ON [PosOk Sync], top=ON [PosOk Sync]
+#             detarm_status : ok: ON [PosOk]
+#              Space_status : ok: 1447.07 GiB free
+#             s2_top_status : ok: ON [PosOk Sync]
+#            roi_pol_status : ok: idle
+#          s2_bottom_status : ok: ON [PosOk Sync]
+#           pow2flip_status : ok: on
+#           sample_z_status : ok: ON [PosOk]
+#            s2_left_status : ok: ON [PosOk Sync]
+#       ReactorPower_status : ok
+#           aflipper_status : ok: flip=on, corr=on
+#           s1_right_status : ok: ON [Ref PosOk Sync]
+#             Sample_status : ok
+#              omega_status : ok: ON [PosOk Sync]
+### Device positions and sample environment state
+#            aflipper_value : up
+#        ReactorPower_value : 20.0 MW
+#             s1_left_value : 1.50 mm
+#            pow2flip_value : 0.000 A
+#         T_be_heater_value : 400 K
+#             Sixfold_value : open
+#            s2_right_value : 0.50 mm
+#                 NL5_value : open
+#                  s1_value : 3.00 x 40.00 mm
+#      polarizer_tilt_value : -0.950 deg
+#               omega_value : 0.000 deg
+#               Space_value : 1447.070 GiB
+#                 phi_value : 0.00 deg
+#       analyzer_tilt_value : -0.810 deg
+#          wavelength_value : 4.74 A
+#            s1_right_value : 1.50 mm
+#                  s2_value : 1.00 x 40.00 mm
+#          expshutter_value : closed
+#              Sample_value : Ni_4day
+#           s2_bottom_value : 20.00 mm
+#               roi_pol_roi : (122, 76, 12, 114)
+#            beamstop_value : 42.000 mm
+#           s1_bottom_value : 20.00 mm
+#             s2_left_value : 0.50 mm
+#            sample_x_value : -15.00 mm
+#                 chi_value : 0.20 deg
+#            sample_z_value : -30.00 mm
+#           be_heater_value : off
+#               Crane_value : 50.1 m
+#                  roi2_roi : (122, 119, 12, 18)
+#         T_be_filter_value : 110 K
+#            pow2comp_value : 0.000 A
+#            pflipper_value : down
+#                  roi1_roi : (122, 50, 12, 140)
+#             mc2_rot_value : 213.111 deg
+#           be_filter_value : in
+#              s2_top_value : 20.00 mm
+#                 t2t_value : 0.000 -0.000 deg
+#            sample_y_value : 3.92 mm
+#              detarm_value : -0.000 deg
+#              s1_top_value : 20.00 mm
+#         polarizer_y_value : -36.00 mm
+### Detector preset information
+#                det_preset : 360.0 cts
+#                  det_mode : counts
+### Scan data
+# etime	;	timer	mon0	mon1	roi1	roi2	roi_pol	full (total)	full (rate)	detimg	file1	file2
+# s	;	s	cts	cts	-	-	-	cts	cps	cts	-	-
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+1.000	;	1.000	1.000	1.000	1.000	10.000	1.000	1.000	10.000	10.000	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+2.00	;	2.00	2.00	2.00	2.00	9.000	2.00	2.00	9.000	9.000	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+3.0	;	3.0	3.0	3.0	3.0	8.00	3.0	3.0	8.00	8.00	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+4.	;	4.	4.	4.	4.	7.0	4.	4.	7.0	7.0	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+5	;	5	5	5	5	6.	5	5	6.	6.	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+6.	;	6.	6.	6.	6.	5	6.	6.	5	5	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+7.0	;	7.0	7.0	7.0	7.0	4.	7.0	7.0	4.	4.	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+8.00	;	8.00	8.00	8.00	8.00	3.0	8.00	8.00	3.0	3.0	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+9.000	;	9.000	9.000	9.000	9.000	2.00	9.000	9.000	2.00	2.00	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+10.000	;	10.000	10.000	10.000	10.000	1.000	10.000	10.000	1.000	1.000	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+360.5	;	360.00	0	529	8	2	7	160	0.4	160	p12345_Ni_Nday_00000000_00000000.yaml	p12345_Ni_Nday_00000000_00000000.gz
+### End of NICOS data file p15145_00005044.dat												
