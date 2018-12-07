@@ -12,13 +12,20 @@
 //
 // ************************************************************************** //
 
-#include "TestService.h"
 #include "GUISpecialTestFactory.h"
+#include "TestService.h"
 #include <QCoreApplication>
 
 //! Runs PyEmbedded functional test.
 int main(int argc, char** argv)
 {
     QCoreApplication a(argc, argv);
-    return TestService<GUISpecialTestFactory>().execute(argc, argv) ? 0 : 1;
+
+    std::string testName = ""; //"CsvImportAssistantUseCases"
+
+    if (testName.empty()) {
+        return TestService<GUISpecialTestFactory>().execute(argc, argv) ? 0 : 1;
+    } else {
+        return TestService<GUISpecialTestFactory>().execute(testName) ? 0 : 1;
+    }
 }
