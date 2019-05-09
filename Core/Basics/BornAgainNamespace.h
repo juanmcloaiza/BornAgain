@@ -253,6 +253,7 @@ const std::string BackgroundValue = "BackgroundValue";
 const std::string BeamToSampleWidthRatio = "BeamToSampleWidthRatio";
 
 const std::string UnitsRad = "rad";
+const std::string UnitsDeg = "deg";
 const std::string UnitsNm = "nm";
 const std::string UnitsNm2 = "nm^2";
 const std::string UnitsNone = "";
