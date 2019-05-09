@@ -35,10 +35,12 @@ LayerBasicRoughnessItem::LayerBasicRoughnessItem()
     : SessionItem(Constants::LayerBasicRoughnessType)
 {
     setToolTip(QStringLiteral("A roughness of interface between two layers."));
-    addProperty(P_SIGMA, 1.0)->setToolTip(QStringLiteral("rms of the roughness in nanometers"));
+    addProperty(P_SIGMA, 1.0)->setToolTip(QStringLiteral("rms of the roughness in nanometers"))
+        .setDisplayName(P_SIGMA+" [nm]");
     addProperty(P_HURST, 0.3)->setLimits(RealLimits::limited(0.0, 1.0))
         .setToolTip(hurst_tooltip);
     getItem(P_HURST)->setDecimals(3);
     addProperty(P_LATERAL_CORR_LENGTH, 5.0)->setToolTip(
-        QStringLiteral("Lateral correlation length of the roughness in nanometers"));
+        QStringLiteral("Lateral correlation length of the roughness in nanometers"))
+        .setDisplayName(P_LATERAL_CORR_LENGTH+" [nm]");
 }
