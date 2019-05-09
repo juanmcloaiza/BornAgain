@@ -34,8 +34,8 @@ LayerItem::LayerItem()
 {
     setToolTip(QStringLiteral("A layer with thickness and material"));
     addProperty(P_THICKNESS, 0.0)->setLimits(RealLimits::lowerLimited(0.0))
-        .setToolTip(QStringLiteral("Thickness of a layer in nanometers"))
-        .setDisplayName(P_THICKNESS+" [nm]");
+        .setToolTip(QStringLiteral("Thickness of a layer in nanometers"));
+    addUnitsToDisplayName(P_THICKNESS,QString::fromStdString(BornAgain::UnitsNm));
 
     addProperty(P_MATERIAL, MaterialItemUtils::defaultMaterialProperty().variant())
             ->setToolTip(QStringLiteral("Material the layer is made of"))
