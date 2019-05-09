@@ -70,6 +70,7 @@ public:
     SessionItem* addProperty(const QString& name, const QVariant& variant);
     QVariant getItemValue(const QString& tag) const;
     void setItemValue(const QString& tag, const QVariant& variant);
+    void addUnitsToDisplayName(const QString someProperty, const QString someUnits);
 
     // convenience functions for groups
     SessionItem* addGroupProperty(const QString& groupTag, const QString& groupType);

@@ -299,8 +299,15 @@ SessionItem* SessionItem::addProperty(const QString& name, const QVariant& varia
         throw GUIHelpers::Error("SessionItem::addProperty -> Error. Can't insert item");
 
     property->setValue(variant);
+
     return property;
 }
+
+//! Add units to the display name of the property
+
+void SessionItem::addUnitsToDisplayName(const QString someProperty, const QString someUnits) {
+    getItem(someProperty)->setDisplayName(someProperty+" [" +someUnits+"]");
+};
 
 //! Directly access value of item under given tag.
 

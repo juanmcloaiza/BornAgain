@@ -36,6 +36,11 @@ AnisoPyramidItem::AnisoPyramidItem()
         ->setToolTip(QStringLiteral("Height of pyramid in nanometers"));
     addProperty(P_ALPHA, 60.0)->setToolTip(
         QStringLiteral("Dihedral angle in degrees between base and facet"));
+     addUnitsToDisplayName(P_LENGTH,QString::fromStdString(BornAgain::UnitsNm));
+     addUnitsToDisplayName(P_WIDTH,QString::fromStdString(BornAgain::UnitsNm));
+     addUnitsToDisplayName(P_HEIGHT,QString::fromStdString(BornAgain::UnitsNm));
+     addUnitsToDisplayName(P_ALPHA,QString::fromStdString(BornAgain::UnitsDeg));
+
 }
 
 std::unique_ptr<IFormFactor> AnisoPyramidItem::createFormFactor() const
@@ -64,6 +69,9 @@ BoxItem::BoxItem()
         ->setToolTip(QStringLiteral("Width of the base in nanometers"));
     addProperty(P_HEIGHT, 13.0)
         ->setToolTip(QStringLiteral("Height of the box in nanometers"));
+     addUnitsToDisplayName(P_LENGTH,QString::fromStdString(BornAgain::UnitsNm));
+     addUnitsToDisplayName(P_WIDTH,QString::fromStdString(BornAgain::UnitsNm));
+     addUnitsToDisplayName(P_HEIGHT,QString::fromStdString(BornAgain::UnitsNm));
 }
 
 std::unique_ptr<IFormFactor> BoxItem::createFormFactor() const
@@ -91,6 +99,9 @@ ConeItem::ConeItem()
         ->setToolTip(QStringLiteral("Height of the cone in nanometers"));
     addProperty(P_ALPHA, 60.0)
         ->setToolTip(QStringLiteral("Angle between the base and the side surface in degrees"));
+     addUnitsToDisplayName(P_HEIGHT,QString::fromStdString(BornAgain::UnitsNm));
+     addUnitsToDisplayName(P_RADIUS,QString::fromStdString(BornAgain::UnitsNm));
+     addUnitsToDisplayName(P_ALPHA,QString::fromStdString(BornAgain::UnitsDeg));
 }
 
 std::unique_ptr<IFormFactor> ConeItem::createFormFactor() const
@@ -118,6 +129,9 @@ Cone6Item::Cone6Item()
         ->setToolTip(QStringLiteral("Height of a truncated pyramid in nanometers"));
     addProperty(P_ALPHA, 60.0)->setToolTip(
         QStringLiteral("Dihedral angle in degrees between base and facet"));
+     addUnitsToDisplayName(P_HEIGHT,QString::fromStdString(BornAgain::UnitsNm));
+     addUnitsToDisplayName(P_ALPHA,QString::fromStdString(BornAgain::UnitsDeg));
+     addUnitsToDisplayName(P_BASEEDGE,QString::fromStdString(BornAgain::UnitsNm));
 
 }
 
@@ -150,6 +164,9 @@ CuboctahedronItem::CuboctahedronItem()
         .setToolTip(QStringLiteral("Ratio of heights of top to bottom pyramids"));
     addProperty(P_ALPHA, 60.0)->setToolTip(
         QStringLiteral("Dihedral angle in degrees between base and facets"));
+    addUnitsToDisplayName(P_LENGTH,QString::fromStdString(BornAgain::UnitsNm));
+    addUnitsToDisplayName(P_HEIGHT,QString::fromStdString(BornAgain::UnitsNm));
+    addUnitsToDisplayName(P_ALPHA,QString::fromStdString(BornAgain::UnitsDeg));
 }
 
 std::unique_ptr<IFormFactor> CuboctahedronItem::createFormFactor() const
@@ -175,6 +192,8 @@ CylinderItem::CylinderItem()
         ->setToolTip(QStringLiteral("Radius of the circular base in nanometers"));
     addProperty(P_HEIGHT, 16.0)
         ->setToolTip(QStringLiteral("Height of the cylinder in nanometers"));
+    addUnitsToDisplayName(P_HEIGHT,QString::fromStdString(BornAgain::UnitsNm));
+    addUnitsToDisplayName(P_RADIUS,QString::fromStdString(BornAgain::UnitsNm));
 }
 
 std::unique_ptr<IFormFactor> CylinderItem::createFormFactor() const
@@ -195,6 +214,7 @@ DodecahedronItem::DodecahedronItem()
     setToolTip(QStringLiteral("Dodecahedron"));
     addProperty(P_EDGE, 10.0)
         ->setToolTip(QStringLiteral("Length of the edge in nanometers"));
+    addUnitsToDisplayName(P_EDGE,QString::fromStdString(BornAgain::UnitsNm));
 }
 
 std::unique_ptr<IFormFactor> DodecahedronItem::createFormFactor() const
@@ -233,6 +253,9 @@ EllipsoidalCylinderItem::EllipsoidalCylinderItem()
         "Radius of the ellipse base in the y-direction, in nanometers"));
     addProperty(P_HEIGHT, 16.0)
         ->setToolTip(QStringLiteral("Height of the ellipsoidal cylinder in nanometers"));
+    addUnitsToDisplayName(P_HEIGHT,QString::fromStdString(BornAgain::UnitsNm));
+    addUnitsToDisplayName(P_RADIUS_X,QString::fromStdString(BornAgain::UnitsNm));
+    addUnitsToDisplayName(P_RADIUS_Y,QString::fromStdString(BornAgain::UnitsNm));
 }
 
 std::unique_ptr<IFormFactor> EllipsoidalCylinderItem::createFormFactor() const
@@ -253,6 +276,7 @@ FullSphereItem::FullSphereItem()
 {
     setToolTip(QStringLiteral("Full sphere"));
     addProperty(P_RADIUS, 8.0)->setToolTip(QStringLiteral("Radius of the sphere in nanometers"));
+    addUnitsToDisplayName(P_RADIUS,QString::fromStdString(BornAgain::UnitsNm));
 }
 
 std::unique_ptr<IFormFactor> FullSphereItem::createFormFactor() const
@@ -276,6 +300,8 @@ FullSpheroidItem::FullSpheroidItem()
         ->setToolTip(QStringLiteral("Radius of the circular cross section in nanometers"));
     addProperty(P_HEIGHT, 13.0)
         ->setToolTip(QStringLiteral("Height of the full spheroid in nanometers"));
+    addUnitsToDisplayName(P_HEIGHT,QString::fromStdString(BornAgain::UnitsNm));
+    addUnitsToDisplayName(P_RADIUS,QString::fromStdString(BornAgain::UnitsNm));
 }
 
 std::unique_ptr<IFormFactor> FullSpheroidItem::createFormFactor() const
@@ -303,6 +329,10 @@ HemiEllipsoidItem::HemiEllipsoidItem()
         "Radius of the ellipse base in the y-direction, in nanometers"));
     addProperty(P_HEIGHT, 8.0)
         ->setToolTip(QStringLiteral("Height of the hemi ellipsoid in nanometers"));
+
+    addUnitsToDisplayName(P_HEIGHT,QString::fromStdString(BornAgain::UnitsNm));
+    addUnitsToDisplayName(P_RADIUS_X,QString::fromStdString(BornAgain::UnitsNm));
+    addUnitsToDisplayName(P_RADIUS_Y,QString::fromStdString(BornAgain::UnitsNm));
 }
 
 std::unique_ptr<IFormFactor> HemiEllipsoidItem::createFormFactor() const
@@ -324,6 +354,7 @@ IcosahedronItem::IcosahedronItem()
     setToolTip(QStringLiteral("Icosahedron"));
     addProperty(P_EDGE, 10.0)
         ->setToolTip(QStringLiteral("Length of the edge in nanometers"));
+    addUnitsToDisplayName(P_EDGE, QString::fromStdString(BornAgain::UnitsNm));
 }
 
 std::unique_ptr<IFormFactor> IcosahedronItem::createFormFactor() const
@@ -347,6 +378,8 @@ Prism3Item::Prism3Item()
         ->setToolTip(QStringLiteral("Length of the base edge in nanometers"));
     addProperty(P_HEIGHT, 13.0)
         ->setToolTip(QStringLiteral("Height in nanometers"));
+    addUnitsToDisplayName(P_HEIGHT,QString::fromStdString(BornAgain::UnitsNm));
+    addUnitsToDisplayName(P_BASEEDGE,QString::fromStdString(BornAgain::UnitsNm));
 }
 
 std::unique_ptr<IFormFactor> Prism3Item::createFormFactor() const
@@ -370,6 +403,8 @@ Prism6Item::Prism6Item()
         ->setToolTip(QStringLiteral("Length of the hexagonal base in nanometers"));
     addProperty(P_HEIGHT, 11.0)
         ->setToolTip(QStringLiteral("Height in nanometers"));
+    addUnitsToDisplayName(P_HEIGHT,QString::fromStdString(BornAgain::UnitsNm));
+    addUnitsToDisplayName(P_BASEEDGE,QString::fromStdString(BornAgain::UnitsNm));
 }
 
 std::unique_ptr<IFormFactor> Prism6Item::createFormFactor() const
@@ -396,6 +431,9 @@ PyramidItem::PyramidItem()
         ->setToolTip(QStringLiteral("Height of the pyramid in nanometers"));
     addProperty(P_ALPHA, 60.0)->setToolTip(QStringLiteral(
        "Dihedral angle between the base and a side face in degrees"));
+    addUnitsToDisplayName(P_HEIGHT,QString::fromStdString(BornAgain::UnitsNm));
+    addUnitsToDisplayName(P_ALPHA,QString::fromStdString(BornAgain::UnitsDeg));
+    addUnitsToDisplayName(P_BASEEDGE,QString::fromStdString(BornAgain::UnitsNm));
 }
 
 std::unique_ptr<IFormFactor> PyramidItem::createFormFactor() const
@@ -423,6 +461,9 @@ Ripple1Item::Ripple1Item()
         ->setToolTip(QStringLiteral("Width of the rectangular base in nanometers"));
     addProperty(P_HEIGHT, 14.0)
         ->setToolTip(QStringLiteral("Height of the ripple in nanometers"));
+    addUnitsToDisplayName(P_LENGTH,QString::fromStdString(BornAgain::UnitsNm));
+    addUnitsToDisplayName(P_WIDTH,QString::fromStdString(BornAgain::UnitsNm));
+    addUnitsToDisplayName(P_HEIGHT,QString::fromStdString(BornAgain::UnitsNm));
 }
 
 std::unique_ptr<IFormFactor> Ripple1Item::createFormFactor() const
@@ -454,6 +495,10 @@ Ripple2Item::Ripple2Item()
         ->setToolTip(QStringLiteral("Height of the ripple in nanometers"));
     addProperty(P_ASYMMETRY, 3.0)
         ->setToolTip(QStringLiteral("Asymmetry length of the triangular profile in nanometers"));
+    addUnitsToDisplayName(P_LENGTH,QString::fromStdString(BornAgain::UnitsNm));
+    addUnitsToDisplayName(P_WIDTH,QString::fromStdString(BornAgain::UnitsNm));
+    addUnitsToDisplayName(P_HEIGHT,QString::fromStdString(BornAgain::UnitsNm));
+    addUnitsToDisplayName(P_ASYMMETRY,QString::fromStdString(BornAgain::UnitsNm));
 }
 
 std::unique_ptr<IFormFactor> Ripple2Item::createFormFactor() const
@@ -482,6 +527,9 @@ TetrahedronItem::TetrahedronItem()
         ->setToolTip(QStringLiteral("Height of the tetrahedron in nanometers"));
     addProperty(P_ALPHA, 60.0)->setToolTip(QStringLiteral(
         "Dihedral angle in degrees between base and facet"));
+    addUnitsToDisplayName(P_HEIGHT,QString::fromStdString(BornAgain::UnitsNm));
+    addUnitsToDisplayName(P_ALPHA,QString::fromStdString(BornAgain::UnitsDeg));
+    addUnitsToDisplayName(P_BASEEDGE,QString::fromStdString(BornAgain::UnitsNm));
 }
 
 std::unique_ptr<IFormFactor> TetrahedronItem::createFormFactor() const
@@ -507,6 +555,8 @@ TruncatedCubeItem::TruncatedCubeItem()
         ->setToolTip(QStringLiteral("Length of the full cube's edge in nanometers"));
     addProperty(P_REMOVED_LENGTH, 6.0)->setToolTip(
        QStringLiteral("Removed length from each edge of the cube in nanometers"));
+    addUnitsToDisplayName(P_LENGTH,QString::fromStdString(BornAgain::UnitsNm));
+    addUnitsToDisplayName(P_REMOVED_LENGTH,QString::fromStdString(BornAgain::UnitsNm));
 }
 
 std::unique_ptr<IFormFactor> TruncatedCubeItem::createFormFactor() const
@@ -533,6 +583,9 @@ TruncatedSphereItem::TruncatedSphereItem()
         ->setToolTip(QStringLiteral("Height of the truncated sphere in nanometers"));
     addProperty(P_REMOVED_TOP, 0.0)
         ->setToolTip(QStringLiteral("Height of the removed top cap in nanometers"));
+    addUnitsToDisplayName(P_REMOVED_TOP,QString::fromStdString(BornAgain::UnitsNm));
+    addUnitsToDisplayName(P_HEIGHT,QString::fromStdString(BornAgain::UnitsNm));
+    addUnitsToDisplayName(P_RADIUS,QString::fromStdString(BornAgain::UnitsNm));
 }
 
 std::unique_ptr<IFormFactor> TruncatedSphereItem::createFormFactor() const
@@ -563,6 +616,9 @@ TruncatedSpheroidItem::TruncatedSpheroidItem()
         QStringLiteral("Ratio of the height of the corresponding full spheroid to its diameter"));
     addProperty(P_REMOVED_TOP, 0.0)
         ->setToolTip(QStringLiteral("Height of the removed top cap in nanometers"));
+    addUnitsToDisplayName(P_HEIGHT,QString::fromStdString(BornAgain::UnitsNm));
+    addUnitsToDisplayName(P_RADIUS,QString::fromStdString(BornAgain::UnitsNm));
+    addUnitsToDisplayName(P_REMOVED_TOP,QString::fromStdString(BornAgain::UnitsNm));
 }
 
 std::unique_ptr<IFormFactor> TruncatedSpheroidItem::createFormFactor() const
