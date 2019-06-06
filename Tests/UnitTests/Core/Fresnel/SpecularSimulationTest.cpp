@@ -247,16 +247,15 @@ TEST_F(SpecularSimulationTest, AddingBeamDistributions)
     checkBeamState(*sim);
 }
 
-TEST_F(SpecularSimulationTest, OutOfRangeAngles)
-{
-    auto sim = defaultSimulation();
-    auto& beam = sim->getInstrument().getBeam();
-    beam.parameter(BornAgain::Inclination)->setValue(-0.2 * Units::deg);
+//TEST_F(SpecularSimulationTest, OutOfRangeAngles)
+//{
+//    auto sim = defaultSimulation();
+//    auto& beam = sim->getInstrument().getBeam();
+//    beam.parameter(BornAgain::Inclination)->setValue(-0.2 * Units::deg);
+//    sim->runSimulation();
+//    auto sim_result = sim->result();
 
-    sim->runSimulation();
-    auto sim_result = sim->result();
-
-    std::unique_ptr<OutputData<double>> data(sim_result.data());
-    EXPECT_EQ(0.0, (*data)[0]);
-    EXPECT_NE(0.0, (*data)[1]);
-}
+//    std::unique_ptr<OutputData<double>> data(sim_result.data());
+//    EXPECT_EQ(0.0, (*data)[0]);
+//    EXPECT_NE(0.0, (*data)[1]);
+//}
