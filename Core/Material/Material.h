@@ -88,6 +88,8 @@ public:
     //! Returns (\f$ \pi/\lambda^2 \f$ - sld), sld (in \f$nm^{-2}\f$) being the scattering length density
     complex_t scalarSubtrSLD(const WavevectorInfo& wavevectors) const;
 
+    complex_t SLD(const double wavelength) const;
+
 #ifndef SWIG
     //! Returns (\f$ \pi/\lambda^2 \f$ - sld) matrix with magnetization corrections
     Eigen::Matrix2cd polarizedSubtrSLD(const WavevectorInfo& wavevectors) const;

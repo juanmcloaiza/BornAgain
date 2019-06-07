@@ -17,6 +17,7 @@
 #include "WavevectorInfo.h"
 #include "Transform3D.h"
 #include "Exceptions.h"
+#include "Units.h"
 #include <typeinfo>
 
 Material::Material(const Material& material)
@@ -91,6 +92,17 @@ bool Material::isDefaultMaterial() const
 complex_t Material::scalarSubtrSLD(const WavevectorInfo& wavevectors) const
 {
     return m_material_impl->scalarSubtrSLD(wavevectors);
+}
+
+complex_t Material::SLD(const double wavelength) const
+{
+    //getSLD = complex_t(sld_real, -sld_imag);
+    const double square_angstroms = Units::angstrom * Units::angstrom;
+    double prefactor = wavelength * wavelength / M_PI;
+    complex_t sld = ( 1.0 - refractiveIndex2(wavelength) ) / prefactor;
+    double sld_real = sld.real();
+    double sld_imag = sld.imag();
+    return complex_t(sld_real * square_angstroms, sld_imag * square_angstroms);
 }
 
 Eigen::Matrix2cd Material::polarizedSubtrSLD(const WavevectorInfo& wavevectors) const
