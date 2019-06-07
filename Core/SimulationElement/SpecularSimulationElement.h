@@ -57,11 +57,11 @@ public:
     //! Returns kz values for Abeles computation of reflection/transition coefficients
     std::vector<complex_t> produceKz(const MultiLayer& sample);
 
-    double kz() const {return m_kz;}
+    double qVec() const {return m_qVec;}
 private:
     void swapContent(SpecularSimulationElement& other);
 
-    double m_kz;
+    double m_qVec;
     PolarizationHandler m_polarization;
     double m_intensity; //!< simulated intensity for detector cell
     bool m_calculation_flag;

@@ -97,7 +97,7 @@ complex_t Material::scalarSubtrSLD(const WavevectorInfo& wavevectors) const
 complex_t Material::SLD(const double wavelength) const
 {
     //getSLD = complex_t(sld_real, -sld_imag);
-    const double square_angstroms = Units::angstrom * Units::angstrom;
+    const double square_angstroms = 1.0;//Units::angstrom * Units::angstrom;
     double prefactor = wavelength * wavelength / M_PI;
     complex_t sld = ( 1.0 - refractiveIndex2(wavelength) ) / prefactor;
     double sld_real = sld.real();

@@ -17,6 +17,7 @@
 #include "MultiLayer.h"
 #include "ProgressHandler.h"
 #include "SpecularSimulationElement.h"
+#include "Units.h"
 #include <complex>
 #define TINY 1e-30
 
@@ -37,7 +38,7 @@ inline void fillQvals(const SpecularElementIter it_begin, const SpecularElementI
                       std::vector<double_t>& qvals)
 {
     for (auto it = it_begin; it != it_end; ++it) {
-        qvals.push_back(-it->kz());
+        qvals.push_back(-it->qVec());
     }
 }
 
@@ -56,8 +57,8 @@ inline void extractSldThicknessRoughnessAndQvalsFromSample(const MultiLayer& mul
         complex_t sl = avr_sample->layerMaterial(i).SLD(1.0);
         double rg = 0.0;
 
-        slds.push_back(sl);
-        thicknesses.push_back(th);
+        slds.push_back(sl * Units::angstrom);
+        thicknesses.push_back(th / Units::angstrom);
         roughnesses.push_back(rg);
     }
 }

@@ -16,18 +16,20 @@
 #include "KzComputation.h"
 #include "Layer.h"
 #include "MultiLayer.h"
+#include "Units.h"
 
 SpecularSimulationElement::SpecularSimulationElement(double kz)
-    : m_kz(kz)
+    : m_qVec(0.0)
     , m_intensity(0.0)
     , m_calculation_flag(true)
     , m_kz_computation([kz](const MultiLayer& sample) {
           return KzComputation::computeKzFromSLDs(sample, kz);
       })
-{}
+{
+}
 
 SpecularSimulationElement::SpecularSimulationElement(double wavelength, double alpha)
-    : m_kz(0)
+    : m_qVec(4.0 * M_PI * sin( 0.5 * alpha * Units::deg) / (wavelength * Units::angstrom))
     , m_intensity(0.0)
     , m_calculation_flag(true)
     , m_kz_computation(
@@ -35,11 +37,10 @@ SpecularSimulationElement::SpecularSimulationElement(double wavelength, double a
               return KzComputation::computeKzFromRefIndeces(sample, k);
           })
 {
-    m_kz = vecOfLambdaAlphaPhi(wavelength, alpha, /*phi =*/0.0).z();
 }
 
 SpecularSimulationElement::SpecularSimulationElement(const SpecularSimulationElement& other)
-    : m_kz(other.m_kz)
+    : m_qVec(other.m_qVec)
     , m_polarization(other.m_polarization)
     , m_intensity(other.m_intensity)
     , m_calculation_flag(other.m_calculation_flag)
@@ -48,7 +49,7 @@ SpecularSimulationElement::SpecularSimulationElement(const SpecularSimulationEle
 }
 
 SpecularSimulationElement::SpecularSimulationElement(SpecularSimulationElement&& other) noexcept
-    : m_kz(other.m_kz)
+    : m_qVec(other.m_qVec)
     , m_polarization(std::move(other.m_polarization))
     , m_intensity(other.m_intensity)
     , m_calculation_flag(other.m_calculation_flag)
