@@ -57,12 +57,20 @@ inline void extractSldThicknessRoughnessAndQvalsFromSample(const MultiLayer& mul
         complex_t sl = avr_sample->layerMaterial(i).SLD(1.0);
         double rg = 0.0;
 
-        slds.push_back(sl * Units::angstrom);
+        slds.push_back(sl * Units::angstrom * Units::angstrom);
         thicknesses.push_back(th / Units::angstrom);
         roughnesses.push_back(rg);
     }
 }
 
+/*
+ * Pass...
+ * slds in angstroms,
+ * thicknesses in angstroms,
+ * roughnesses in angstroms,
+ * qvals in inverse angstroms.
+ * Thanks.
+ */
 inline void heavyComputation(std::vector<double_t>& reflectometry,
                              const std::vector<complex_t>& slds,
                              const std::vector<double_t>& thicknesses,
@@ -88,13 +96,8 @@ inline void heavyComputation(std::vector<double_t>& reflectometry,
     complex<double>* thickness = nullptr;
     double* rough_sqr = nullptr;
 
-    size_t nlayers = size_t(thicknesses.size());
-
-    scale = 1.0;
-    bkg = 0.0;
-    sub = complex<double>(2.07e-06, 0.0 + TINY);
-    super = complex<double>(0.00, 0.0);
-
+    // number of layers between substrate and superstrate
+    size_t nlayers = size_t(thicknesses.size() - 2);
     try {
         SLD = new complex<double>[nlayers + 2];
         thickness = new complex<double>[nlayers];
@@ -102,22 +105,29 @@ inline void heavyComputation(std::vector<double_t>& reflectometry,
     } catch (...) {
         goto done;
     }
-    // fill out all the SLD's for all the layers
-    for (int ii = 1; ii < int(nlayers + 1); ii += 1) {
-        SLD[ii] = 4 * M_PI * (complex<double>(slds[size_t(ii - 1)]) + TINY) - super;
-        thickness[ii - 1] = complex<double>(0, thicknesses[size_t(ii - 1)]);
-        rough_sqr[ii - 1] = -2 * roughnesses[size_t(ii - 1)] * roughnesses[size_t(ii - 1)];
-    }
 
-    SLD[0] = complex<double>(0, 0);
-    SLD[nlayers + 1] = 4 * M_PI * (sub - super);
-    rough_sqr[nlayers] = 0.0;
+    scale = 1.0;
+    bkg = 0.0;
+    sub = complex<double>(slds.back().real(), slds.back().imag() + TINY);
+    super = complex<double>(slds.front().real(), slds.front().imag() + TINY);
+
+    // fill out all the SLD's for all the layers
+    SLD[0] = complex<double>(0, 0); //sub - sub = always zero
+    for (int ii = 1; ii < int(nlayers + 1); ii += 1) {
+        complex<double> sld_correction = complex<double>(slds[size_t(ii - 1)].real(), slds[size_t(ii - 1)].imag() + TINY);
+        SLD[ii] = 4. * M_PI * (sld_correction - super);
+        thickness[ii - 1] = complex<double>(0, thicknesses[size_t(ii - 1)]);
+        rough_sqr[ii - 1] = - 2. * roughnesses[size_t(ii - 1)] * roughnesses[size_t(ii - 1)];
+    }
+    SLD[nlayers + 1] = 4. * M_PI * (sub - super);
+    rough_sqr[nlayers] = 0.0; //put the correct roughness
+
 
     for (size_t j = 0; j < npoints; j++) {
         complex<double> beta, rj;
         complex<double> kn, kn_next;
 
-        qq2 = complex<double>(qvals[j] * qvals[j] / 4, 0);
+        qq2 = complex<double>(qvals[j] * qvals[j] / 4., 0.);
 
         // now calculate reflectivities and wavevectors
         kn = std::sqrt(qq2);
