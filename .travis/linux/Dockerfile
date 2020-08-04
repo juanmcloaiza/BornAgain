@@ -1,3 +1,3 @@
-FROM scgmlz/bornagain-dev:focal
+FROM scgmlz/bornagain-dev:bionic
 ADD . /source
 WORKDIR /source
