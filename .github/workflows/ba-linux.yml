@@ -99,11 +99,48 @@ jobs:
          name: BornAgainDeb
          path: ./build/*.deb
 
+####
+#      - name: Create Release
+#        id: create_release
+#        uses: actions/create-release@v1.1.2
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#        with:
+#          tag_name: Ubuntu20.04LTS-FocalFossa 
+#          release_name: Ubuntu 20.04 LTS (FocalFossa)
+#          draft: false
+#          prerelease: true
+#
+#      - name: Upload Release Asset
+#        id: upload-release-asset 
+#        uses: actions/upload-release-asset@v1.0.2
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#        with:
+#          upload_url: ${{ steps.create_release.outputs.upload_url }} 
+#          asset_path: ./build/BornAgain-1.17-99_amd64.deb #CHANGE HERE WHEN NEW VERSIONS ARE OUT
+#          asset_name:  bornagain-1.17-99_amd64_ubuntu-focal.deb #CHANGE HERE WHEN NEW VERSIONS ARE OUT
+#          asset_content_type: Debian package
+####
     - name: Testing
       run: |
         cd $GITHUB_WORKSPACE/build
         ccache -s
         ctest -LE Fullcheck --output-on-failure
+        sudo apt-get install -y ./BornAgain-1.17-99_amd64.deb
+        python3 -c "import bornagain as ba; print(ba.GetVersionNumberrrrrrrrrrr())"
+
+    - name: Upload binaries to release
+      uses: svenstaro/upload-release-action@v2
+      if: success()
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: ./build/BornAgain-1.17-99_amd64.deb #CHANGE HERE WHEN NEW VERSIONS ARE OUT
+        asset_name: bornagain-1.17-99_amd64_ubuntu-focal.deb #CHANGE HERE WHEN NEW VERSIONS ARE OUT
+        tag: Ubuntu20.04LTS-FocalFossa
+        release_name: Ubuntu 20.04 LTS (FocalFossa)
+        overwrite: true
+        prerelease: true
 
     - name: Upload test logs
       uses: actions/upload-artifact@v2
